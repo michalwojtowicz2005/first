@@ -1,0 +1,61 @@
+<html>
+<head>
+<title> Michał Wójowicz zadanie 1 </title>
+<script language="JavaScript">
+        function WinOpen_Wojt() {
+            window.open("przyklad1a.html","okienko","toolbar=no,directories=no,menubar=no,height=280,width=160,top=200,left=200");
+        }
+
+        function show_confirm() {
+            output = document.getElementById("output");
+            if (confirm("Naciśnij OK"))
+                output.innerHTML = "nacisnąłeś OK";
+            else
+                output.innerHTML = "anulowano";
+
+        }
+        
+        function show_prompt() {
+            var name=prompt("Wpisz imię","Imię Nazwisko");
+            output = document.getElementById("output");
+            console.log(name);
+            if (name!="")
+                output.innerHTML = "Witaj " + name + "! what's up?";
+            else
+                output.innerHTML = "Wpisz coś!";
+        }
+
+        function sum() {
+            output = document.getElementById("output");
+
+            var liczba1=prompt("liczba1=","");
+            var liczba2=prompt("liczba2=","");
+            var suma;
+            var a=parseFloat(liczba1);
+            var b=parseFloat(liczba2);
+            suma=a+b;
+            output.innerHTML = "suma="+a+" + "+b+" = "+suma+"<br>";
+        }
+        
+        function asd() {
+            window.open("zad3.html","toolbar=no","directories=no","menubar=no","height=200","width=200","top=200","left=200");
+        }
+
+
+    </script>
+    <meta charset="UTF-8" />
+    </head>
+
+    <body>
+        <div style="font-size: 2cm;"> Michał Wójtowicz </div>
+
+        <input type="button" name="przycisk" value="Przykład 1a" onclick="WinOpen_Wojt()">
+        <input type="button" onclick="return confirm('Alert')" value="Pokaż Alert Box" />
+        <input type="button" onclick="show_confirm()" value="Pokaż confirm box" />
+        <input type="button" onclick="show_prompt()" value="Pokaż prompt box" />
+        <input type="button" onclick="sum()" value="Oblicz sume" />
+        <input type="button" name="asd" value="Układ" onclick="asd()">
+        <input type="button" name="Ile sekund" value="Ile sekund" onclick="ilesekund()">
+        <div id="output"></div>
+    </body>
+</html> 

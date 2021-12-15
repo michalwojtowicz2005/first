@@ -1,0 +1,30 @@
+<html>
+<body>
+<title> Zadanie 9 </title>
+<div style="color:green;font-size:40px;">
+<script language="JavaScript">
+var D1_woj=prompt("dzień 1=","");
+var G1_woj=prompt("godzina 1=","");
+var D2_woj=prompt("dzień 2=","");
+var G2_woj=prompt("godzina 2=","");
+
+var suma;
+ var a=parseFloat(D1_woj);
+ var b=parseFloat(D2_woj);
+ var c=parseFloat(G1_woj);
+ var d=parseFloat(G2_woj);
+
+ if (a<=b && 1<=a && b<=31 && 1<=c && d<=24) {
+    c=c+a*24;
+    d=d+b*24;
+    suma=(d-c)*3600;
+    document.write("Od ",a," do ",b," minęło ",suma," sekund. " );
+ }
+ else {
+    document.write("Podano błędne dane!");
+ }
+ 
+ </script>
+</div>
+</body>
+</html>

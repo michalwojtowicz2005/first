@@ -1,0 +1,49 @@
+<html> 
+    <head> 
+        <title> Zadanie 20 </title>
+        <script language="JavaScript">
+        function V(r,h, w) {
+        r_liczba=parseFloat(r)
+        h_liczba=parseFloat(h)
+        w_liczba=parseFloat(w)
+        V_wynik=( r_liczba+h_liczba)*w_liczba/2
+        document.getElementsByName('obwod')[0].value=V_wynik.toFixed(2);
+        alert("Pole = "+V_wynik.toFixed(2));
+        pokaz1.innerHTML="Pole = "+V_wynik.toFixed(2)+"<br>"; 
+        }
+        function Pc(r,h,w,c) {
+        r_liczba=parseFloat(r)
+        h_liczba=parseFloat(h)
+        w_liczba=parseFloat(w)
+        c_liczba=parseFloat(c)
+        var c_liczba=Math.sqrt(Math.pow(Math.abs((r_liczba-h_liczba)), 2)+Math.pow(w_liczba, 2))
+
+        Pc_wynik=r_liczba+h_liczba+2*c_liczba
+        document.getElementsByName('pole')[0].value=Pc_wynik.toFixed(2);
+        alert("Obwód = "+Pc_wynik.toFixed(2));
+        pokaz2.innerHTML="Obwód = "+Pc_wynik.toFixed(2);
+        }
+        </script>
+    </head> 
+        <body> 
+            Obliczenie pola oraz obwodu trapez równoramiennego <br><br>
+            <form name="formularz" action="..." onsubmit="V(this.promien.value,this.wysokosc.value,this.wysokosch.value); 
+            Pc(this.promien.value,this.wysokosc.value,this.wysokosch.value);return false"> 
+            Podaj a = 
+            <input size="6" name="promien">
+            Podaj b = 
+            <input size="6" name="wysokosc">
+            Podaj h = 
+            <input size="6" name="wysokosch"><br><br>
+            <input TYPE="submit" Value="Oblicz"><br><br>
+            Pole = 
+            <input size="6" name="obwod">
+            Obwód = 
+            <input size="6" name="pole">
+            </form>
+            <table>
+            <tr id="pokaz1"></tr>
+            <tr id="pokaz2"></tr>
+            </table>
+            </body> 
+</html>
