@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <title> Zadanie 53 </title>
+        <script language='JavaScript' type='text/JavaScript'>
+        function weryfikacja_hasla() 
+        {var prob = 1;var haslo = prompt('Podaj hasło',''); 
+        if (haslo != null) {
+            while (prob < 3) {
+                if (!haslo) history.go(-1);
+                if (haslo.toLowerCase() == 'asdf') {alert('Hasło OK!');
+                window.open('skrypt1.html','_top');break;} prob+=1;var haslo = prompt('Złe hasło. Spróbuj ponownie','Hasło');}} 
+                if (haslo !=null) {
+                    if (haslo.toLowerCase()!='Hasło' + prob ==3) history.go(-1);
+                    return ' ';}}
+                    </script>
+        </head>
+        <body>
+            <form name="formularz">
+                Wójtowicz:  <input type="text" name="login"/><br><br>
+                Michał:  <input type="password" name="haslo"/><br><br>
+                <input type="button" value="Logowanie..." onClick="logowanie(this.form)"/><br><br>
+            </form>
+        </body>
+</html>

@@ -1,0 +1,25 @@
+<html>
+<head>
+    <title> Zadanie 48 </title>
+<script type="text/javascript">
+
+tekst ="Obiekty języka JavaScript"
+dl = tekst.length
+
+x = tekst.substring (42,69)
+
+tekst = "Obiekty języka JavaScript"
+x = tekst.toLowerCase()
+
+tekst = "Obiekty języka JavaScript"
+x = tekst.toUpperCase()
+
+String.prototype.malaLitera = function() { return this.charAt(0).toLowerCase() + this.substr(1);}
+
+var tx1 = 'komputer';
+document.write(tx1.malaLitera())
+
+var dat_cz = new Date();
+
+var data = new Date(2022,3,23);
+</script>
